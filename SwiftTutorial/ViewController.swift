@@ -8,10 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet var tblMenu: UITableView!
+    var menuItems = NSMutableArray()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        menuItems = [
+            "Hello Swift",
+            "UILabel & UITextField",
+            "UIImageView"
+        ]
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +28,24 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menuItems.count
+    }
 
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath) as MenuCell
+        cell.label.text = menuItems.objectAtIndex(indexPath.row).description
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if menuItems.objectAtIndex(indexPath.row) as String == "Hello Swift" {
+            self.performSegueWithIdentifier("helloSwiftSegue", sender: self)
+        }
+    }
 }
 

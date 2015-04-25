@@ -13,6 +13,8 @@
 		D08A66A71AEBF98E00436694 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08A66A61AEBF98E00436694 /* Images.xcassets */; };
 		D08A66AA1AEBF98E00436694 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08A66A81AEBF98E00436694 /* LaunchScreen.xib */; };
 		D08A66B61AEBF98E00436694 /* SwiftTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08A66B51AEBF98E00436694 /* SwiftTutorialTests.swift */; };
+		D08A66C41AEBFB0F00436694 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08A66C31AEBFB0F00436694 /* MenuCell.swift */; };
+		D08A66C71AEC0C1700436694 /* HelloSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08A66C61AEC0C1700436694 /* HelloSwiftViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		D08A66AF1AEBF98E00436694 /* SwiftTutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08A66B41AEBF98E00436694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D08A66B51AEBF98E00436694 /* SwiftTutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTutorialTests.swift; sourceTree = "<group>"; };
+		D08A66C31AEBFB0F00436694 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		D08A66C61AEC0C1700436694 /* HelloSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelloSwiftViewController.swift; path = HelloSwift/HelloSwiftViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +81,10 @@
 		D08A669C1AEBF98E00436694 /* SwiftTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D08A66C51AEC0BE800436694 /* HelloSwift */,
 				D08A669F1AEBF98E00436694 /* AppDelegate.swift */,
 				D08A66A11AEBF98E00436694 /* ViewController.swift */,
+				D08A66C31AEBFB0F00436694 /* MenuCell.swift */,
 				D08A66A31AEBF98E00436694 /* Main.storyboard */,
 				D08A66A61AEBF98E00436694 /* Images.xcassets */,
 				D08A66A81AEBF98E00436694 /* LaunchScreen.xib */,
@@ -110,6 +116,14 @@
 				D08A66B41AEBF98E00436694 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D08A66C51AEC0BE800436694 /* HelloSwift */ = {
+			isa = PBXGroup;
+			children = (
+				D08A66C61AEC0C1700436694 /* HelloSwiftViewController.swift */,
+			);
+			name = HelloSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D08A66A21AEBF98E00436694 /* ViewController.swift in Sources */,
+				D08A66C71AEC0C1700436694 /* HelloSwiftViewController.swift in Sources */,
 				D08A66A01AEBF98E00436694 /* AppDelegate.swift in Sources */,
+				D08A66C41AEBFB0F00436694 /* MenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
