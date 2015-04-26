@@ -45,7 +45,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if menuItems.objectAtIndex(indexPath.row) as String == "Hello Swift" {
             self.performSegueWithIdentifier("helloSwiftSegue", sender: self)
+        } else if menuItems.objectAtIndex(indexPath.row) as String == "UILabel & UITextField" {
+            self.performSegueWithIdentifier("textSegue", sender: self)
+        } else if menuItems.objectAtIndex(indexPath.row) as String == "UIImageView" {
+            self.performSegueWithIdentifier("imageSegue", sender: self);
         }
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 44;
     }
 }
 
