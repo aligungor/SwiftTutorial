@@ -37,17 +37,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath) as MenuCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath) as! MenuCell
         cell.label.text = menuItems.objectAtIndex(indexPath.row).description
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if menuItems.objectAtIndex(indexPath.row) as String == "Hello Swift" {
+        if menuItems.objectAtIndex(indexPath.row) as! String == "Hello Swift" {
             self.performSegueWithIdentifier("helloSwiftSegue", sender: self)
-        } else if menuItems.objectAtIndex(indexPath.row) as String == "UILabel & UITextField" {
+        } else if menuItems.objectAtIndex(indexPath.row) as! String == "UILabel & UITextField" {
             self.performSegueWithIdentifier("textSegue", sender: self)
-        } else if menuItems.objectAtIndex(indexPath.row) as String == "UIImageView" {
+        } else if menuItems.objectAtIndex(indexPath.row) as! String == "UIImageView" {
             self.performSegueWithIdentifier("imageSegue", sender: self);
         }
     }

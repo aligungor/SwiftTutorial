@@ -25,7 +25,7 @@ class ImageViewController: UIViewController {
     }
 
     @IBAction func segSelectCar(sender: AnyObject) {
-        if (sender as UISegmentedControl).selectedSegmentIndex == 0 {
+        if (sender as! UISegmentedControl).selectedSegmentIndex == 0 {
             imgCar.image = UIImage(named:"Ferrari")
         } else {
             imgCar.image = UIImage(named:"Lamborghini")
