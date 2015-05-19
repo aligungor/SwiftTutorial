@@ -17,6 +17,9 @@
 		D08A66C71AEC0C1700436694 /* HelloSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08A66C61AEC0C1700436694 /* HelloSwiftViewController.swift */; };
 		D08AE2521AED227E004B6146 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AE2511AED227E004B6146 /* ImageViewController.swift */; };
 		D0B186A51AEC20CE00541233 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B186A41AEC20CE00541233 /* TextViewController.swift */; };
+		D0D9F4201B08FFC900F06198 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9F41F1B08FFC900F06198 /* Car.swift */; };
+		D0D9F4241B0901A300F06198 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9F4231B0901A300F06198 /* TableViewController.swift */; };
+		D0D9F4261B0901C500F06198 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9F4251B0901C500F06198 /* CarTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		D08A66C61AEC0C1700436694 /* HelloSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelloSwiftViewController.swift; path = HelloSwift/HelloSwiftViewController.swift; sourceTree = "<group>"; };
 		D08AE2511AED227E004B6146 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageViewController.swift; path = UIImageView/ImageViewController.swift; sourceTree = "<group>"; };
 		D0B186A41AEC20CE00541233 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewController.swift; path = "UILabel&UITextField/TextViewController.swift"; sourceTree = "<group>"; };
+		D0D9F41F1B08FFC900F06198 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Car.swift; path = Pojo/Car.swift; sourceTree = "<group>"; };
+		D0D9F4231B0901A300F06198 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = UITableView/TableViewController.swift; sourceTree = "<group>"; };
+		D0D9F4251B0901C500F06198 /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarTableViewCell.swift; path = UITableView/CarTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,8 @@
 		D08A669C1AEBF98E00436694 /* SwiftTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D0D9F41E1B08FFA300F06198 /* Pojo */,
+				D0D9F4191B08FDA800F06198 /* UITableView */,
 				D08AE2501AED2233004B6146 /* UIImageView */,
 				D0B186A31AEC208A00541233 /* UILabel&UITextField */,
 				D08A66C51AEC0BE800436694 /* HelloSwift */,
@@ -146,6 +154,23 @@
 				D0B186A41AEC20CE00541233 /* TextViewController.swift */,
 			);
 			name = "UILabel&UITextField";
+			sourceTree = "<group>";
+		};
+		D0D9F4191B08FDA800F06198 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				D0D9F4231B0901A300F06198 /* TableViewController.swift */,
+				D0D9F4251B0901C500F06198 /* CarTableViewCell.swift */,
+			);
+			name = UITableView;
+			sourceTree = "<group>";
+		};
+		D0D9F41E1B08FFA300F06198 /* Pojo */ = {
+			isa = PBXGroup;
+			children = (
+				D0D9F41F1B08FFC900F06198 /* Car.swift */,
+			);
+			name = Pojo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,10 +274,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0B186A51AEC20CE00541233 /* TextViewController.swift in Sources */,
+				D0D9F4201B08FFC900F06198 /* Car.swift in Sources */,
 				D08A66A21AEBF98E00436694 /* ViewController.swift in Sources */,
 				D08A66C71AEC0C1700436694 /* HelloSwiftViewController.swift in Sources */,
 				D08A66A01AEBF98E00436694 /* AppDelegate.swift in Sources */,
+				D0D9F4261B0901C500F06198 /* CarTableViewCell.swift in Sources */,
 				D08AE2521AED227E004B6146 /* ImageViewController.swift in Sources */,
+				D0D9F4241B0901A300F06198 /* TableViewController.swift in Sources */,
 				D08A66C41AEBFB0F00436694 /* MenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

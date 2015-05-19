@@ -18,9 +18,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         menuItems = [
             "Hello Swift",
             "UILabel & UITextField",
-            "UIImageView"
+            "UIImageView",
+            "UITableView & UITableViewController"
         ]
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +49,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.performSegueWithIdentifier("textSegue", sender: self)
         } else if menuItems.objectAtIndex(indexPath.row) as! String == "UIImageView" {
             self.performSegueWithIdentifier("imageSegue", sender: self);
+        } else if menuItems.objectAtIndex(indexPath.row) as! String == "UITableView & UITableViewController" {
+            self.performSegueWithIdentifier("tableViewSegue", sender: self)
         }
     }
     
