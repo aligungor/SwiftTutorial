@@ -19,7 +19,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             "Hello Swift",
             "UILabel & UITextField",
             "UIImageView",
-            "UITableView & UITableViewController"
+            "UITableView & UITableViewController",
+            "UICollectionView & UICollectionViewController"
         ]
     }
 
@@ -51,6 +52,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.performSegueWithIdentifier("imageSegue", sender: self);
         } else if menuItems.objectAtIndex(indexPath.row) as! String == "UITableView & UITableViewController" {
             self.performSegueWithIdentifier("tableViewSegue", sender: self)
+        } else if menuItems.objectAtIndex(indexPath.row) as! String == "UICollectionView & UICollectionViewController" {
+            self.performSegueWithIdentifier("collectionViewSegue", sender: self)
         }
     }
     
