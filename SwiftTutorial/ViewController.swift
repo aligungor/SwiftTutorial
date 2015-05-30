@@ -20,7 +20,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             "UILabel & UITextField",
             "UIImageView",
             "UITableView & UITableViewController",
-            "UICollectionView & UICollectionViewController"
+            "UICollectionView & UICollectionViewController",
+            "UIWebView"
         ]
     }
 
@@ -54,6 +55,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.performSegueWithIdentifier("tableViewSegue", sender: self)
         } else if menuItems.objectAtIndex(indexPath.row) as! String == "UICollectionView & UICollectionViewController" {
             self.performSegueWithIdentifier("collectionViewSegue", sender: self)
+        } else if menuItems.objectAtIndex(indexPath.row) as! String == "UIWebView" {
+            self.performSegueWithIdentifier("webSegue", sender: self)
         }
     }
     
