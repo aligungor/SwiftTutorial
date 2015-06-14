@@ -23,6 +23,7 @@
 		D0D9F4201B08FFC900F06198 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9F41F1B08FFC900F06198 /* Car.swift */; };
 		D0D9F4241B0901A300F06198 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9F4231B0901A300F06198 /* TableViewController.swift */; };
 		D0D9F4261B0901C500F06198 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9F4251B0901C500F06198 /* CarTableViewCell.swift */; };
+		D0F92C771B2D8CE200184C49 /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F92C761B2D8CE200184C49 /* FileDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		D0D9F41F1B08FFC900F06198 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Car.swift; path = Pojo/Car.swift; sourceTree = "<group>"; };
 		D0D9F4231B0901A300F06198 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = UITableView/TableViewController.swift; sourceTree = "<group>"; };
 		D0D9F4251B0901C500F06198 /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarTableViewCell.swift; path = UITableView/CarTableViewCell.swift; sourceTree = "<group>"; };
+		D0F92C761B2D8CE200184C49 /* FileDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileDownloader.swift; path = FileDownload/FileDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		D08A669C1AEBF98E00436694 /* SwiftTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D0F92C751B2D8CB400184C49 /* FileDownload */,
 				D0C187CB1B1A3D0E00F2C8B3 /* UIWebView */,
 				D0AC6A581B10FAE4007C07BB /* UICollectionView */,
 				D0D9F4191B08FDA800F06198 /* UITableView */,
@@ -196,6 +199,14 @@
 				D0D9F41F1B08FFC900F06198 /* Car.swift */,
 			);
 			name = Pojo;
+			sourceTree = "<group>";
+		};
+		D0F92C751B2D8CB400184C49 /* FileDownload */ = {
+			isa = PBXGroup;
+			children = (
+				D0F92C761B2D8CE200184C49 /* FileDownloader.swift */,
+			);
+			name = FileDownload;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +315,7 @@
 				D08A66C71AEC0C1700436694 /* HelloSwiftViewController.swift in Sources */,
 				D0AC6A5A1B10FB33007C07BB /* CollectionViewController.swift in Sources */,
 				D08A66A01AEBF98E00436694 /* AppDelegate.swift in Sources */,
+				D0F92C771B2D8CE200184C49 /* FileDownloader.swift in Sources */,
 				D0D9F4261B0901C500F06198 /* CarTableViewCell.swift in Sources */,
 				D0C187CD1B1A3D4F00F2C8B3 /* WebViewController.swift in Sources */,
 				D08AE2521AED227E004B6146 /* ImageViewController.swift in Sources */,

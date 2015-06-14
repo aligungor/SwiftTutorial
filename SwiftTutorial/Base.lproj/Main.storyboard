@@ -32,7 +32,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="Qcu-Su-3V4"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -72,6 +72,7 @@
                         <segue destination="XON-Nf-GnU" kind="show" identifier="tableViewSegue" id="R1t-yy-XYr"/>
                         <segue destination="dlN-Bp-btk" kind="show" identifier="collectionViewSegue" id="MVL-LB-Tg9"/>
                         <segue destination="ZW9-aJ-K0i" kind="show" identifier="webSegue" id="UiT-ZW-Z7I"/>
+                        <segue destination="2wz-FG-7Lc" kind="show" identifier="avPlayerSegue" id="9Lr-wP-JPK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -96,7 +97,7 @@
                                     <constraint firstAttribute="height" constant="77" id="Eeq-Ph-AqA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -385,7 +386,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkX-s5-Qk1">
                                             <rect key="frame" x="79" y="29" width="203" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQg-OG-TbC">
@@ -427,6 +428,14 @@
             </objects>
             <point key="canvasLocation" x="2039" y="-201"/>
         </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="bw0-rk-BcP">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="2wz-FG-7Lc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RyM-L2-nR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2448" y="-201"/>
+        </scene>
         <!--UICollectionView-->
         <scene sceneID="8Wj-Mu-wIZ">
             <objects>
@@ -456,7 +465,7 @@
                                             <rect key="frame" x="20" y="165" width="160" height="21"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">

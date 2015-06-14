@@ -21,7 +21,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             "UIImageView",
             "UITableView & UITableViewController",
             "UICollectionView & UICollectionViewController",
-            "UIWebView"
+            "UIWebView",
+            "File Download"
         ]
     }
 
@@ -57,6 +58,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.performSegueWithIdentifier("collectionViewSegue", sender: self)
         } else if menuItems.objectAtIndex(indexPath.row) as! String == "UIWebView" {
             self.performSegueWithIdentifier("webSegue", sender: self)
+        } else if menuItems.objectAtIndex(indexPath.row) as! String == "File Download" {
+            FileDownloader().startDownload()
         }
     }
     
