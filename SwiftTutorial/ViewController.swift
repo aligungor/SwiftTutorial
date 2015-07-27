@@ -22,7 +22,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             "UITableView & UITableViewController",
             "UICollectionView & UICollectionViewController",
             "UIWebView",
-            "File Download"
+            "File Download",
+            "JSON Parse"
         ]
     }
 
@@ -46,20 +47,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if menuItems.objectAtIndex(indexPath.row) as! String == "Hello Swift" {
+        var selected = menuItems.objectAtIndex(indexPath.row) as! String;
+        if selected == "Hello Swift" {
             self.performSegueWithIdentifier("helloSwiftSegue", sender: self)
-        } else if menuItems.objectAtIndex(indexPath.row) as! String == "UILabel & UITextField" {
+        } else if selected == "UILabel & UITextField" {
             self.performSegueWithIdentifier("textSegue", sender: self)
-        } else if menuItems.objectAtIndex(indexPath.row) as! String == "UIImageView" {
+        } else if selected == "UIImageView" {
             self.performSegueWithIdentifier("imageSegue", sender: self);
-        } else if menuItems.objectAtIndex(indexPath.row) as! String == "UITableView & UITableViewController" {
+        } else if selected == "UITableView & UITableViewController" {
             self.performSegueWithIdentifier("tableViewSegue", sender: self)
-        } else if menuItems.objectAtIndex(indexPath.row) as! String == "UICollectionView & UICollectionViewController" {
+        } else if selected == "UICollectionView & UICollectionViewController" {
             self.performSegueWithIdentifier("collectionViewSegue", sender: self)
-        } else if menuItems.objectAtIndex(indexPath.row) as! String == "UIWebView" {
+        } else if selected == "UIWebView" {
             self.performSegueWithIdentifier("webSegue", sender: self)
-        } else if menuItems.objectAtIndex(indexPath.row) as! String == "File Download" {
+        } else if selected == "File Download" {
             FileDownloader().startDownload()
+        } else if selected == "JSON Parse" {
+            Json.parseJson();
         }
     }
     
