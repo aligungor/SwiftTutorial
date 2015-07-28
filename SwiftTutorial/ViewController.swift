@@ -23,7 +23,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             "UICollectionView & UICollectionViewController",
             "UIWebView",
             "File Download",
-            "JSON Parse"
+            "JSON Parse",
+            "NSUserDefaults"
         ]
     }
 
@@ -64,6 +65,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             FileDownloader().startDownload()
         } else if selected == "JSON Parse" {
             Json.parseJson();
+        } else if selected == "NSUserDefaults" {
+            UserDefaults.work()
         }
     }
     

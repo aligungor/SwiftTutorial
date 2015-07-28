@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D05D2A161B66B30500B3F3A9 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05D2A151B66B30500B3F3A9 /* UserDefaults.swift */; };
 		D08A66A01AEBF98E00436694 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08A669F1AEBF98E00436694 /* AppDelegate.swift */; };
 		D08A66A21AEBF98E00436694 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08A66A11AEBF98E00436694 /* ViewController.swift */; };
 		D08A66A51AEBF98E00436694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08A66A31AEBF98E00436694 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D05D2A151B66B30500B3F3A9 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = NSUserDefaults/UserDefaults.swift; sourceTree = "<group>"; };
 		D08A669A1AEBF98E00436694 /* SwiftTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08A669E1AEBF98E00436694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D08A669F1AEBF98E00436694 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D05D2A141B66B25E00B3F3A9 /* NSUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				D05D2A151B66B30500B3F3A9 /* UserDefaults.swift */,
+			);
+			name = NSUserDefaults;
+			sourceTree = "<group>";
+		};
 		D08A66911AEBF98E00436694 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		D08A669C1AEBF98E00436694 /* SwiftTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D05D2A141B66B25E00B3F3A9 /* NSUserDefaults */,
 				D0993AEC1B64FE7200BA9A1F /* JSON */,
 				D0F92C751B2D8CB400184C49 /* FileDownload */,
 				D0C187CB1B1A3D0E00F2C8B3 /* UIWebView */,
@@ -331,6 +342,7 @@
 				D0D9F4261B0901C500F06198 /* CarTableViewCell.swift in Sources */,
 				D0C187CD1B1A3D4F00F2C8B3 /* WebViewController.swift in Sources */,
 				D08AE2521AED227E004B6146 /* ImageViewController.swift in Sources */,
+				D05D2A161B66B30500B3F3A9 /* UserDefaults.swift in Sources */,
 				D0D9F4241B0901A300F06198 /* TableViewController.swift in Sources */,
 				D08A66C41AEBFB0F00436694 /* MenuCell.swift in Sources */,
 				D0AC6A5C1B10FB4E007C07BB /* CarCollectionViewCell.swift in Sources */,
