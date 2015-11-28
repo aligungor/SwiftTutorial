@@ -13,26 +13,26 @@ class Json: NSObject {
     class func parseJson() {
         let backgroundQueue = dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)
         dispatch_async(backgroundQueue, {
-            println("parsing...")
-            var jsonUrl = "http://api.openweathermap.org/data/2.5/weather?q=Nazilli";
-            var url = NSURL(string: jsonUrl)
-            var jsonData = NSData(contentsOfURL: url!)
-            var json: AnyObject? = NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions.AllowFragments, error: nil)
-            println(json?.debugDescription)
+            print("parsing...")
+            let jsonUrl = "http://api.openweathermap.org/data/2.5/weather?q=Nazilli";
+            let url = NSURL(string: jsonUrl)
+            let jsonData = NSData(contentsOfURL: url!)
+            let json: AnyObject? = try? NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions.AllowFragments)
+            // print(json?.debugDescription) // all json data
             
             // get json from json
-            var jsonCoords: NSDictionary = json?["coord"] as! NSDictionary
+            let jsonCoords: NSDictionary = json?["coord"] as! NSDictionary
             
             // get parameter from json
-            println(jsonCoords["lon"]!)
-            var lat = jsonCoords["lat"] as! Float
-            println(lat)
+            print(jsonCoords["lon"]!)
+            let lat = jsonCoords["lat"] as! Float
+            print(lat)
             
             // get json array from json
-            var weatherArray: NSArray? = json?["weather"] as? NSArray
-            println(weatherArray?.objectAtIndex(0)["description"] as! String)
+            let weatherArray: NSArray? = json?["weather"] as? NSArray
+            print(weatherArray?.objectAtIndex(0)["description"] as! String)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                println("parsing ends")
+                print("parsing ends")
             })
         })
     }

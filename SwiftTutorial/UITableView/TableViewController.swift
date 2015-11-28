@@ -34,7 +34,7 @@ class TableViewController: UITableViewController {
     }
     
     func generateCarArray() {
-        var car1 = Car()
+        let car1 = Car()
         car1.carName = "Ferrari"
         car1.carImage = "Ferrari"
         carArray.addObject(car1)
@@ -49,7 +49,7 @@ class TableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("carCell", forIndexPath: indexPath) as! CarTableViewCell
-        var carAtIndex = carArray.objectAtIndex(indexPath.row) as! Car
+        let carAtIndex = carArray.objectAtIndex(indexPath.row) as! Car
         cell.lblCar?.text = carAtIndex.carName
         cell.imgCar?.image = UIImage(named: carAtIndex.carImage!)
         cell.btnCarInfo?.tag = indexPath.row
@@ -57,8 +57,8 @@ class TableViewController: UITableViewController {
     }
     
     @IBAction func onClickCarCellInfo(sender: UIButton) {
-        var carInfoClicked = carArray.objectAtIndex(sender.tag) as! Car
-        var alert = UIAlertController(
+        let carInfoClicked = carArray.objectAtIndex(sender.tag) as! Car
+        let alert = UIAlertController(
             title: carInfoClicked.carName!,
             message: carInfoClicked.carName! + " Info Button Click!",
             preferredStyle: UIAlertControllerStyle.Alert
@@ -72,8 +72,8 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var carInfoClicked = carArray.objectAtIndex(indexPath.row) as! Car
-        var alert = UIAlertController(
+        let carInfoClicked = carArray.objectAtIndex(indexPath.row) as! Car
+        let alert = UIAlertController(
             title: carInfoClicked.carName!,
             message: carInfoClicked.carName! + " Cell Select",
             preferredStyle: UIAlertControllerStyle.Alert

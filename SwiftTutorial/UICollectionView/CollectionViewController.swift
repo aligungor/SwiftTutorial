@@ -36,14 +36,14 @@ class CollectionViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("carCell", forIndexPath: indexPath) as! CarCollectionViewCell
-        var carAtIndex = carArray.objectAtIndex(indexPath.row) as! Car
+        let carAtIndex = carArray.objectAtIndex(indexPath.row) as! Car
         cell.lblCar?.text = carAtIndex.carName
         cell.imgCar?.image = UIImage(named: carAtIndex.carImage!)
         return cell
     }
     
     func generateCarArray() {
-        var car1 = Car()
+        let car1 = Car()
         car1.carName = "Ferrari"
         car1.carImage = "Ferrari"
         carArray.addObject(car1)

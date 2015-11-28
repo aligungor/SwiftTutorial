@@ -26,7 +26,7 @@ class TextViewController: UIViewController {
     }
     
     @IBAction func onClickAdd(sender: AnyObject) {
-        lblOutput.text = lblOutput.text! + "" + txtInput.text
+        lblOutput.text = lblOutput.text! + "" + txtInput.text!
         txtInput.text = ""
     }
     

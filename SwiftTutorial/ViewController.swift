@@ -48,7 +48,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var selected = menuItems.objectAtIndex(indexPath.row) as! String;
+        let selected = menuItems.objectAtIndex(indexPath.row) as! String;
         if selected == "Hello Swift" {
             self.performSegueWithIdentifier("helloSwiftSegue", sender: self)
         } else if selected == "UILabel & UITextField" {

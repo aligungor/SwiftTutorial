@@ -24,12 +24,12 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
-        println("Load failed")
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+        print("Load failed")
     }
     
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        println("should start load")
+        print("should start load")
         return true
     }
     

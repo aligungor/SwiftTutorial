@@ -36,23 +36,23 @@ class UserDefaults: NSObject {
     
     func getCachedDefaults() {
         let defaults = NSUserDefaults.standardUserDefaults()
-        var cachedString = defaults.objectForKey(STRING_KEY) as! String
-        var cachedInt = defaults.integerForKey(INTEGER_KEY)
-        var cachedBool = defaults.boolForKey(BOOL_KEY)
-        var cachedFloat = defaults.floatForKey(FLOAT_KEY)
-        var cachedDouble = defaults.doubleForKey(DOUBLE_KEY)
-        var cachedUrl = defaults.URLForKey(URL_KEY)
-        println("cached defaults :")
-        println(cachedString)
-        println(cachedInt)
-        println(cachedBool)
-        println(cachedFloat)
-        println(cachedDouble)
-        println(cachedUrl)
+        let cachedString = defaults.objectForKey(STRING_KEY) as! String
+        let cachedInt = defaults.integerForKey(INTEGER_KEY)
+        let cachedBool = defaults.boolForKey(BOOL_KEY)
+        let cachedFloat = defaults.floatForKey(FLOAT_KEY)
+        let cachedDouble = defaults.doubleForKey(DOUBLE_KEY)
+        let cachedUrl = defaults.URLForKey(URL_KEY)
+        print("cached defaults :")
+        print(cachedString)
+        print(cachedInt)
+        print(cachedBool)
+        print(cachedFloat)
+        print(cachedDouble)
+        print(cachedUrl)
     }
     
     class func work() {
-        var userDefaults : UserDefaults = UserDefaults();
+        let userDefaults : UserDefaults = UserDefaults();
         userDefaults.cacheDefaults()
         userDefaults.getCachedDefaults()
     }

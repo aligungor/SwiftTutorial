@@ -22,7 +22,7 @@ class HelloSwiftViewController: UIViewController {
     }
     
     @IBAction func onClickHelloSwift(sender: AnyObject) {
-        var alert = UIAlertController(
+        let alert = UIAlertController(
             title: "Hello",
             message: "Hello Swift",
             preferredStyle: UIAlertControllerStyle.Alert
