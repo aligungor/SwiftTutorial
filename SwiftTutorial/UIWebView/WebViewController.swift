@@ -26,6 +26,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
         print("Load failed")
+        print(error.debugDescription)
     }
     
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
