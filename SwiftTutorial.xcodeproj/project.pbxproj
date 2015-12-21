@@ -17,6 +17,7 @@
 		D08A66C41AEBFB0F00436694 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08A66C31AEBFB0F00436694 /* MenuCell.swift */; };
 		D08A66C71AEC0C1700436694 /* HelloSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08A66C61AEC0C1700436694 /* HelloSwiftViewController.swift */; };
 		D08AE2521AED227E004B6146 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AE2511AED227E004B6146 /* ImageViewController.swift */; };
+		D0918F901C26C66500B0CEFF /* XMLParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0918F8F1C26C66500B0CEFF /* XMLParse.swift */; };
 		D0993AEE1B64FE9C00BA9A1F /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0993AED1B64FE9C00BA9A1F /* Json.swift */; };
 		D0AC6A5A1B10FB33007C07BB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC6A591B10FB33007C07BB /* CollectionViewController.swift */; };
 		D0AC6A5C1B10FB4E007C07BB /* CarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC6A5B1B10FB4E007C07BB /* CarCollectionViewCell.swift */; };
@@ -53,6 +54,7 @@
 		D08A66C31AEBFB0F00436694 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		D08A66C61AEC0C1700436694 /* HelloSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelloSwiftViewController.swift; path = HelloSwift/HelloSwiftViewController.swift; sourceTree = "<group>"; };
 		D08AE2511AED227E004B6146 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageViewController.swift; path = UIImageView/ImageViewController.swift; sourceTree = "<group>"; };
+		D0918F8F1C26C66500B0CEFF /* XMLParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMLParse.swift; path = XML/XMLParse.swift; sourceTree = "<group>"; };
 		D0993AED1B64FE9C00BA9A1F /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Json.swift; path = JSON/Json.swift; sourceTree = "<group>"; };
 		D0AC6A591B10FB33007C07BB /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewController.swift; path = UICollectionView/CollectionViewController.swift; sourceTree = "<group>"; };
 		D0AC6A5B1B10FB4E007C07BB /* CarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarCollectionViewCell.swift; path = UICollectionView/CarCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		D08A669C1AEBF98E00436694 /* SwiftTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D0918F8E1C26C63500B0CEFF /* XML */,
 				D05D2A141B66B25E00B3F3A9 /* NSUserDefaults */,
 				D0993AEC1B64FE7200BA9A1F /* JSON */,
 				D0F92C751B2D8CB400184C49 /* FileDownload */,
@@ -171,6 +174,14 @@
 				D08AE2511AED227E004B6146 /* ImageViewController.swift */,
 			);
 			name = UIImageView;
+			sourceTree = "<group>";
+		};
+		D0918F8E1C26C63500B0CEFF /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				D0918F8F1C26C66500B0CEFF /* XMLParse.swift */,
+			);
+			name = XML;
 			sourceTree = "<group>";
 		};
 		D0993AEC1B64FE7200BA9A1F /* JSON */ = {
@@ -339,6 +350,7 @@
 				D08A66A21AEBF98E00436694 /* ViewController.swift in Sources */,
 				D08A66C71AEC0C1700436694 /* HelloSwiftViewController.swift in Sources */,
 				D0AC6A5A1B10FB33007C07BB /* CollectionViewController.swift in Sources */,
+				D0918F901C26C66500B0CEFF /* XMLParse.swift in Sources */,
 				D08A66A01AEBF98E00436694 /* AppDelegate.swift in Sources */,
 				D0F92C771B2D8CE200184C49 /* FileDownloader.swift in Sources */,
 				D0993AEE1B64FE9C00BA9A1F /* Json.swift in Sources */,
