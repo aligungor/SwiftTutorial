@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D03B5CE31C2D7A1900783D21 /* Delegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B5CE21C2D7A1900783D21 /* Delegation.swift */; };
+		D03B5CE51C2D7A4D00783D21 /* Sleeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B5CE41C2D7A4D00783D21 /* Sleeper.swift */; };
 		D05D2A161B66B30500B3F3A9 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05D2A151B66B30500B3F3A9 /* UserDefaults.swift */; };
 		D08A66A01AEBF98E00436694 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08A669F1AEBF98E00436694 /* AppDelegate.swift */; };
 		D08A66A21AEBF98E00436694 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08A66A11AEBF98E00436694 /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D03B5CE21C2D7A1900783D21 /* Delegation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Delegation.swift; path = Delegation/Delegation.swift; sourceTree = "<group>"; };
+		D03B5CE41C2D7A4D00783D21 /* Sleeper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sleeper.swift; path = Delegation/Sleeper.swift; sourceTree = "<group>"; };
 		D05D2A151B66B30500B3F3A9 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = NSUserDefaults/UserDefaults.swift; sourceTree = "<group>"; };
 		D08A669A1AEBF98E00436694 /* SwiftTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08A669E1AEBF98E00436694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D03B5CE11C2D79E000783D21 /* Delegation */ = {
+			isa = PBXGroup;
+			children = (
+				D03B5CE21C2D7A1900783D21 /* Delegation.swift */,
+				D03B5CE41C2D7A4D00783D21 /* Sleeper.swift */,
+			);
+			name = Delegation;
+			sourceTree = "<group>";
+		};
 		D05D2A141B66B25E00B3F3A9 /* NSUserDefaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +126,7 @@
 		D08A669C1AEBF98E00436694 /* SwiftTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D03B5CE11C2D79E000783D21 /* Delegation */,
 				D0918F8E1C26C63500B0CEFF /* XML */,
 				D05D2A141B66B25E00B3F3A9 /* NSUserDefaults */,
 				D0993AEC1B64FE7200BA9A1F /* JSON */,
@@ -348,6 +362,8 @@
 				D0B186A51AEC20CE00541233 /* TextViewController.swift in Sources */,
 				D0D9F4201B08FFC900F06198 /* Car.swift in Sources */,
 				D08A66A21AEBF98E00436694 /* ViewController.swift in Sources */,
+				D03B5CE31C2D7A1900783D21 /* Delegation.swift in Sources */,
+				D03B5CE51C2D7A4D00783D21 /* Sleeper.swift in Sources */,
 				D08A66C71AEC0C1700436694 /* HelloSwiftViewController.swift in Sources */,
 				D0AC6A5A1B10FB33007C07BB /* CollectionViewController.swift in Sources */,
 				D0918F901C26C66500B0CEFF /* XMLParse.swift in Sources */,

@@ -25,7 +25,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             "File Download",
             "JSON Parse",
             "NSUserDefaults",
-            "XML Parse"
+            "XML Parse",
+            "Delegation"
         ]
     }
 
@@ -70,6 +71,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             UserDefaults.work()
         } else if selected == "XML Parse" {
             XMLParse.parse()
+        } else if selected == "Delegation" {
+            Delegation.start()
         }
     }
     
