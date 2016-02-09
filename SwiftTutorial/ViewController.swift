@@ -26,7 +26,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             "JSON Parse",
             "NSUserDefaults",
             "XML Parse",
-            "Delegation"
+            "Delegation",
+            "Closures"
         ]
     }
 
@@ -73,6 +74,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             XMLParse.parse()
         } else if selected == "Delegation" {
             Delegation.start()
+        } else if selected == "Closures" {
+            Closures.runClosures()
         }
     }
     
