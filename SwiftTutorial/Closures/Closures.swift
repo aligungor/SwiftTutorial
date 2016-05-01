@@ -45,9 +45,9 @@ class Closures: NSObject {
         print("completionblock called")
     }
     
-    func speakAfterWork(var words: String, completionBlock:(said: String) -> ()) {
+    func speakAfterWork(words: String, completionBlock:(said: String) -> ()) {
         print("start")
-        words = words.stringByAppendingString(" a day")
+        print(words.stringByAppendingString(" a day"))
         print("end")
         completionBlock(said: words)
         print("completionblock called")
