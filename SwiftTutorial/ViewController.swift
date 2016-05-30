@@ -27,7 +27,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             "NSUserDefaults",
             "XML Parse",
             "Delegation",
-            "Closures"
+            "Closures",
+            "MultipleStoryboards"
         ]
     }
 
@@ -76,6 +77,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             Delegation.start()
         } else if selected == "Closures" {
             Closures.runClosures()
+        } else if selected == "MultipleStoryboards" {
+            MultipleStoryboards.showMultipleStoryboards(self.navigationController!);
         }
     }
     

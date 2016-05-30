@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Second Storyboard View Controller-->
+        <scene sceneID="9x4-HW-YHQ">
+            <objects>
+                <viewController storyboardIdentifier="secondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lcT-hT-1z3" customClass="SecondStoryboardViewController" customModule="SwiftTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pUn-oz-hcW"/>
+                        <viewControllerLayoutGuide type="bottom" id="oFZ-gp-ePG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lTB-Xp-aJU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Controller from Second.storyboard" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYu-bI-fy3">
+                                <rect key="frame" x="20" y="215" width="280" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="he3-r2-MKC"/>
+                                    <constraint firstAttribute="width" constant="280" id="qNJ-Ir-by2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yE-5S-kXw">
+                                <rect key="frame" x="112" y="273" width="96" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="69h-H0-bbU"/>
+                                    <constraint firstAttribute="height" constant="30" id="cjL-Qh-hF7"/>
+                                </constraints>
+                                <state key="normal" title="Show First"/>
+                                <connections>
+                                    <action selector="onClickShowFirst:" destination="lcT-hT-1z3" eventType="touchUpInside" id="Fab-Q4-9Nm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74509803919999995" green="0.87450980389999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9yE-5S-kXw" firstAttribute="top" secondItem="pYu-bI-fy3" secondAttribute="bottom" constant="8" id="AKn-sp-J5B"/>
+                            <constraint firstItem="pYu-bI-fy3" firstAttribute="centerY" secondItem="lTB-Xp-aJU" secondAttribute="centerY" id="PjB-Yq-7oz"/>
+                            <constraint firstItem="pYu-bI-fy3" firstAttribute="centerX" secondItem="lTB-Xp-aJU" secondAttribute="centerX" id="dwQ-X9-gvt"/>
+                            <constraint firstItem="9yE-5S-kXw" firstAttribute="centerX" secondItem="lTB-Xp-aJU" secondAttribute="centerX" id="jRR-qJ-8yE"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0U-9g-T4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="263" y="293"/>
+        </scene>
+    </scenes>
+</document>
