@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		862452BF1D587A76007DA94E /* Inheritance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862452BE1D587A76007DA94E /* Inheritance.swift */; };
+		862452C51D589A2C007DA94E /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862452C41D589A2C007DA94E /* Pokemon.swift */; };
+		862452C71D589A83007DA94E /* Pikachu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862452C61D589A83007DA94E /* Pikachu.swift */; };
+		862452C91D589A93007DA94E /* Bulbasaur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862452C81D589A93007DA94E /* Bulbasaur.swift */; };
 		D01241C71CFCD15E00750771 /* FirstStoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01241C61CFCD15E00750771 /* FirstStoryboardViewController.swift */; };
 		D01241C91CFCD18B00750771 /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01241C81CFCD18B00750771 /* First.storyboard */; };
 		D01241CB1CFCD29400750771 /* SecondStoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01241CA1CFCD29400750771 /* SecondStoryboardViewController.swift */; };
@@ -48,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		862452BE1D587A76007DA94E /* Inheritance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Inheritance.swift; path = Inheritance/Inheritance.swift; sourceTree = "<group>"; };
+		862452C41D589A2C007DA94E /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pokemon.swift; path = Inheritance/Pokemon.swift; sourceTree = "<group>"; };
+		862452C61D589A83007DA94E /* Pikachu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pikachu.swift; path = Inheritance/Pikachu.swift; sourceTree = "<group>"; };
+		862452C81D589A93007DA94E /* Bulbasaur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bulbasaur.swift; path = Inheritance/Bulbasaur.swift; sourceTree = "<group>"; };
 		D01241C61CFCD15E00750771 /* FirstStoryboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstStoryboardViewController.swift; path = MultipleStoryboard/FirstStoryboardViewController.swift; sourceTree = "<group>"; };
 		D01241C81CFCD18B00750771 /* First.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = First.storyboard; path = MultipleStoryboard/First.storyboard; sourceTree = "<group>"; };
 		D01241CA1CFCD29400750771 /* SecondStoryboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondStoryboardViewController.swift; path = MultipleStoryboard/SecondStoryboardViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +108,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		862452B91D5879F8007DA94E /* Inheritance */ = {
+			isa = PBXGroup;
+			children = (
+				862452BE1D587A76007DA94E /* Inheritance.swift */,
+				862452C41D589A2C007DA94E /* Pokemon.swift */,
+				862452C61D589A83007DA94E /* Pikachu.swift */,
+				862452C81D589A93007DA94E /* Bulbasaur.swift */,
+			);
+			name = Inheritance;
+			sourceTree = "<group>";
+		};
 		D01241C51CFCD06600750771 /* MultipleStoryboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +169,7 @@
 		D08A669C1AEBF98E00436694 /* SwiftTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				862452B91D5879F8007DA94E /* Inheritance */,
 				D01241C51CFCD06600750771 /* MultipleStoryboard */,
 				D0DFDFA61C6A79CB002532E9 /* Closures */,
 				D03B5CE11C2D79E000783D21 /* Delegation */,
@@ -400,8 +420,11 @@
 				D01241CB1CFCD29400750771 /* SecondStoryboardViewController.swift in Sources */,
 				D08A66A21AEBF98E00436694 /* ViewController.swift in Sources */,
 				D03B5CE31C2D7A1900783D21 /* Delegation.swift in Sources */,
+				862452C71D589A83007DA94E /* Pikachu.swift in Sources */,
 				D03B5CE51C2D7A4D00783D21 /* Sleeper.swift in Sources */,
+				862452BF1D587A76007DA94E /* Inheritance.swift in Sources */,
 				D08A66C71AEC0C1700436694 /* HelloSwiftViewController.swift in Sources */,
+				862452C91D589A93007DA94E /* Bulbasaur.swift in Sources */,
 				D0AC6A5A1B10FB33007C07BB /* CollectionViewController.swift in Sources */,
 				D0918F901C26C66500B0CEFF /* XMLParse.swift in Sources */,
 				D0DFDFA81C6A7A31002532E9 /* Closures.swift in Sources */,
@@ -411,6 +434,7 @@
 				D0993AEE1B64FE9C00BA9A1F /* Json.swift in Sources */,
 				D0D9F4261B0901C500F06198 /* CarTableViewCell.swift in Sources */,
 				D0C187CD1B1A3D4F00F2C8B3 /* WebViewController.swift in Sources */,
+				862452C51D589A2C007DA94E /* Pokemon.swift in Sources */,
 				D08AE2521AED227E004B6146 /* ImageViewController.swift in Sources */,
 				D05D2A161B66B30500B3F3A9 /* UserDefaults.swift in Sources */,
 				D0D9F4241B0901A300F06198 /* TableViewController.swift in Sources */,
