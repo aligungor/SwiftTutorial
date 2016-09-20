@@ -30,7 +30,8 @@ class Json: NSObject {
             
             // get json array from json
             let weatherArray: NSArray? = json?["weather"] as? NSArray
-            print(weatherArray?.object(at: 0)["description"] as! String)
+            let weatherDictionary: NSDictionary? = weatherArray?.object(at: 0) as! NSDictionary?
+            print(weatherDictionary?.object(forKey: "description") as! String)
             DispatchQueue.main.async(execute: { () -> Void in
                 print("parsing ends")
             })
