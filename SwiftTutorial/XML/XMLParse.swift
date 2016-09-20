@@ -8,9 +8,9 @@
 
 import UIKit
 
-class XMLParse: NSObject, NSXMLParserDelegate {
+class XMLParse: NSObject, XMLParserDelegate {
 
-    var parser = NSXMLParser()
+    var parser = XMLParser()
     var element = NSString()
     
     var titles = NSMutableArray()
@@ -28,31 +28,31 @@ class XMLParse: NSObject, NSXMLParserDelegate {
     
     func begin() {
         titles = []
-        parser = NSXMLParser(contentsOfURL:(NSURL(string:"http://rss.cnn.com/rss/edition_space.rss"))!)!
+        parser = XMLParser(contentsOf:(URL(string:"http://rss.cnn.com/rss/edition_space.rss"))!)!
         parser.delegate = self
         parser.parse()
     }
     
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String])
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String])
     {
-        element = elementName
-        if (elementName as NSString).isEqualToString("item")
+        element = elementName as NSString
+        if (elementName as NSString).isEqual(to: "item")
         {
             title = NSMutableString()
             title = ""
         }
     }
     
-    func parser(parser: NSXMLParser, foundCharacters string: String) {
-        if element.isEqualToString("title") {
-            title.appendString(string)
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        if element.isEqual(to: "title") {
+            title.append(string)
         }
     }
     
-    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?)
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?)
     {
-        if (elementName as NSString).isEqualToString("item") {
-            titles.addObject(title)
+        if (elementName as NSString).isEqual(to: "item") {
+            titles.add(title)
         }
     }
     

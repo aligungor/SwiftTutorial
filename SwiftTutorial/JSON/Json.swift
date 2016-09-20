@@ -11,13 +11,13 @@ import UIKit
 class Json: NSObject {
     
     class func parseJson() {
-        let backgroundQueue = dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)
-        dispatch_async(backgroundQueue, {
+        let backgroundQueue = DispatchQueue.global(qos: DispatchQoS.QoSClass.background)
+        backgroundQueue.async(execute: {
             print("parsing...")
             let jsonUrl = "http://api.openweathermap.org/data/2.5/weather?q=Nazilli";
-            let url = NSURL(string: jsonUrl)
-            let jsonData = NSData(contentsOfURL: url!)
-            let json: AnyObject? = try? NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions.AllowFragments)
+            let url = URL(string: jsonUrl)
+            let jsonData = try? Data(contentsOf: url!)
+            let json: AnyObject? = try! JSONSerialization.jsonObject(with: jsonData!, options: JSONSerialization.ReadingOptions.allowFragments) as AnyObject?
             // print(json?.debugDescription) // all json data
             
             // get json from json
@@ -30,8 +30,8 @@ class Json: NSObject {
             
             // get json array from json
             let weatherArray: NSArray? = json?["weather"] as? NSArray
-            print(weatherArray?.objectAtIndex(0)["description"] as! String)
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            print(weatherArray?.object(at: 0)["description"] as! String)
+            DispatchQueue.main.async(execute: { () -> Void in
                 print("parsing ends")
             })
         })

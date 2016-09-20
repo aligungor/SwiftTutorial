@@ -21,16 +21,16 @@ class HelloSwiftViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onClickHelloSwift(sender: AnyObject) {
+    @IBAction func onClickHelloSwift(_ sender: AnyObject) {
         let alert = UIAlertController(
             title: "Hello",
             message: "Hello Swift",
-            preferredStyle: UIAlertControllerStyle.Alert
+            preferredStyle: UIAlertControllerStyle.alert
         )
         
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     /*

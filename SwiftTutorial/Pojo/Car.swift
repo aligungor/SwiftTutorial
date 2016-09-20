@@ -12,7 +12,7 @@ class Car: NSObject {
     var carName : String?
     var carImage : String?
     
-    func generateACar(name: String, imageName image: String) -> Car {
+    func generateACar(_ name: String, imageName image: String) -> Car {
         self.carName = name
         self.carImage = image
         return self

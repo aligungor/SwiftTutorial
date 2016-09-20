@@ -10,9 +10,9 @@ import UIKit
 
 class MultipleStoryboards: NSObject {
 
-    class func showMultipleStoryboards(navigationController: UINavigationController) {
+    class func showMultipleStoryboards(_ navigationController: UINavigationController) {
         let storyboard = UIStoryboard(name: "First", bundle: nil)
-        let firstStoryboardViewController = storyboard.instantiateViewControllerWithIdentifier("firstVC")
+        let firstStoryboardViewController = storyboard.instantiateViewController(withIdentifier: "firstVC")
         navigationController.pushViewController(firstStoryboardViewController, animated: true)
     }
     
