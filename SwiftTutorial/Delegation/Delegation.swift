@@ -21,7 +21,7 @@ class Delegation: SleeperDelegate {
         print("sleeper started sleeping")
     }
     
-    func sleeping(_ sleeper: Sleeper, forTime time: Double) {
+    func sleeping(sleeper: Sleeper, forTime time: Double) {
         print("sleeper is sleeping for \(time) seconds")
     }
     

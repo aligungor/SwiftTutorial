@@ -11,13 +11,13 @@ import UIKit
 class Json: NSObject {
     
     class func parseJson() {
-        let backgroundQueue = DispatchQueue.global(qos: DispatchQoS.QoSClass.background)
-        backgroundQueue.async(execute: {
+        let backgroundQueue = dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)
+        dispatch_async(backgroundQueue, {
             print("parsing...")
             let jsonUrl = "http://api.openweathermap.org/data/2.5/weather?q=Nazilli";
-            let url = URL(string: jsonUrl)
-            let jsonData = try? Data(contentsOf: url!)
-            let json: AnyObject? = try! JSONSerialization.jsonObject(with: jsonData!, options: JSONSerialization.ReadingOptions.allowFragments) as AnyObject?
+            let url = NSURL(string: jsonUrl)
+            let jsonData = NSData(contentsOfURL: url!)
+            let json: AnyObject? = try? NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions.AllowFragments)
             // print(json?.debugDescription) // all json data
             
             // get json from json
@@ -30,9 +30,8 @@ class Json: NSObject {
             
             // get json array from json
             let weatherArray: NSArray? = json?["weather"] as? NSArray
-            let weatherObject: NSDictionary? = weatherArray?.object(at: 0) as? NSDictionary
-            print(weatherObject?.object(forKey: "description"))
-            DispatchQueue.main.async(execute: { () -> Void in
+            print(weatherArray?.objectAtIndex(0)["description"] as! String)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 print("parsing ends")
             })
         })

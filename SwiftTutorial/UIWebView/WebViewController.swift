@@ -24,29 +24,29 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
         print("Load failed")
-        print(error.localizedDescription)
+        print(error.debugDescription)
     }
     
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         print("should start load")
         return true
     }
     
-    func webViewDidStartLoad(_ webView: UIWebView) {
+    func webViewDidStartLoad(webView: UIWebView) {
         indLoading.startAnimating()
     }
     
-    func webViewDidFinishLoad(_ webView: UIWebView) {
+    func webViewDidFinishLoad(webView: UIWebView) {
         indLoading.stopAnimating()
     }
     
-    @IBAction func onClickLoadHTML(_ sender: UIButton) {
+    @IBAction func onClickLoadHTML(sender: UIButton) {
         webView.loadHTMLString("<html><h1>Ali</h1> <h2>Güngör</h2></html>", baseURL: nil)
     }
     
-    @IBAction func onClickLoadURL(_ sender: UIButton) {
-        webView.loadRequest(URLRequest(url: URL(string: "http://github.com/aligungor")!))
+    @IBAction func onClickLoadURL(sender: UIButton) {
+        webView.loadRequest(NSURLRequest(URL: NSURL(string: "http://github.com/aligungor")!))
     }
 }

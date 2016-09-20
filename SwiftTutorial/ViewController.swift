@@ -37,34 +37,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
 
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuItems.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as! MenuCell
-        cell.label.text = (menuItems.object(at: (indexPath as NSIndexPath).row) as AnyObject).description
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath) as! MenuCell
+        cell.label.text = menuItems.objectAtIndex(indexPath.row).description
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selected = menuItems.object(at: (indexPath as NSIndexPath).row) as! String;
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let selected = menuItems.objectAtIndex(indexPath.row) as! String;
         if selected == "Hello Swift" {
-            self.performSegue(withIdentifier: "helloSwiftSegue", sender: self)
+            self.performSegueWithIdentifier("helloSwiftSegue", sender: self)
         } else if selected == "UILabel & UITextField" {
-            self.performSegue(withIdentifier: "textSegue", sender: self)
+            self.performSegueWithIdentifier("textSegue", sender: self)
         } else if selected == "UIImageView" {
-            self.performSegue(withIdentifier: "imageSegue", sender: self);
+            self.performSegueWithIdentifier("imageSegue", sender: self);
         } else if selected == "UITableView & UITableViewController" {
-            self.performSegue(withIdentifier: "tableViewSegue", sender: self)
+            self.performSegueWithIdentifier("tableViewSegue", sender: self)
         } else if selected == "UICollectionView & UICollectionViewController" {
-            self.performSegue(withIdentifier: "collectionViewSegue", sender: self)
+            self.performSegueWithIdentifier("collectionViewSegue", sender: self)
         } else if selected == "UIWebView" {
-            self.performSegue(withIdentifier: "webSegue", sender: self)
+            self.performSegueWithIdentifier("webSegue", sender: self)
         } else if selected == "File Download" {
             FileDownloader().startDownload()
         } else if selected == "JSON Parse" {

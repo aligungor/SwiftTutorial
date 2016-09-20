@@ -27,7 +27,7 @@ class ImageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func segSelectCar(_ sender: AnyObject) {
+    @IBAction func segSelectCar(sender: AnyObject) {
         if (sender as! UISegmentedControl).selectedSegmentIndex == 0 {
             imgCar.image = UIImage(named:"Ferrari")
         } else {
@@ -35,16 +35,16 @@ class ImageViewController: UIViewController {
         }
     }
     
-    @IBAction func onClickBtnLoadImage(_ sender: AnyObject) {
-        let backgroundQueue = DispatchQueue.global(qos: DispatchQoS.QoSClass.background)
-        imgCar.isHidden = true
+    @IBAction func onClickBtnLoadImage(sender: AnyObject) {
+        let backgroundQueue = dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)
+        imgCar.hidden = true
         indLoading.startAnimating()
-        backgroundQueue.async(execute: {
-            let url = URL(string: self.imageUrl)
-            let data = try? Data(contentsOf: url!)
-            DispatchQueue.main.async(execute: { () -> Void in
+        dispatch_async(backgroundQueue, {
+            let url = NSURL(string: self.imageUrl)
+            let data = NSData(contentsOfURL: url!)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.imgCar.image = UIImage(data: data!)
-                self.imgCar.isHidden = false
+                self.imgCar.hidden = false
                 self.indLoading.stopAnimating()
             })
         })

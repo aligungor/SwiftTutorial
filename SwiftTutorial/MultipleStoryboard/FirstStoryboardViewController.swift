@@ -20,11 +20,11 @@ class FirstStoryboardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onClickShowSecond(_ sender: UIButton) {
+    @IBAction func onClickShowSecond(sender: UIButton) {
         // create storyboard object using its file name
         let storyboard = UIStoryboard(name: "Second", bundle: nil)
         // create view controller you needed with id
-        let secondStoryboardViewController = storyboard.instantiateViewController(withIdentifier: "secondVC")
+        let secondStoryboardViewController = storyboard.instantiateViewControllerWithIdentifier("secondVC")
         // then use it
         self.navigationController?.pushViewController(secondStoryboardViewController, animated: true)
     }

@@ -23,12 +23,12 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // Return the number of sections.
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
         return carArray.count
     }
@@ -37,49 +37,49 @@ class TableViewController: UITableViewController {
         let car1 = Car()
         car1.carName = "Ferrari"
         car1.carImage = "Ferrari"
-        carArray.add(car1)
-        carArray.add(Car().generateACar("Lamborghini", imageName: "Lamborghini"))
-        carArray.add(Car().generateACar("Tesla", imageName: "Tesla"))
-        carArray.add(Car().generateACar("Mercedes-Benz", imageName: "Mercedes"))
-        carArray.add(Car().generateACar("BMW", imageName: "BMW"))
-        carArray.add(Car().generateACar("Porsche", imageName: "Porsche"))
-        carArray.add(Car().generateACar("Aston Martin", imageName: "Aston"))
+        carArray.addObject(car1)
+        carArray.addObject(Car().generateACar("Lamborghini", imageName: "Lamborghini"))
+        carArray.addObject(Car().generateACar("Tesla", imageName: "Tesla"))
+        carArray.addObject(Car().generateACar("Mercedes-Benz", imageName: "Mercedes"))
+        carArray.addObject(Car().generateACar("BMW", imageName: "BMW"))
+        carArray.addObject(Car().generateACar("Porsche", imageName: "Porsche"))
+        carArray.addObject(Car().generateACar("Aston Martin", imageName: "Aston"))
         self.tableView.reloadData()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "carCell", for: indexPath) as! CarTableViewCell
-        let carAtIndex = carArray.object(at: (indexPath as NSIndexPath).row) as! Car
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("carCell", forIndexPath: indexPath) as! CarTableViewCell
+        let carAtIndex = carArray.objectAtIndex(indexPath.row) as! Car
         cell.lblCar?.text = carAtIndex.carName
         cell.imgCar?.image = UIImage(named: carAtIndex.carImage!)
-        cell.btnCarInfo?.tag = (indexPath as NSIndexPath).row
+        cell.btnCarInfo?.tag = indexPath.row
         return cell
     }
     
-    @IBAction func onClickCarCellInfo(_ sender: UIButton) {
-        let carInfoClicked = carArray.object(at: sender.tag) as! Car
+    @IBAction func onClickCarCellInfo(sender: UIButton) {
+        let carInfoClicked = carArray.objectAtIndex(sender.tag) as! Car
         let alert = UIAlertController(
             title: carInfoClicked.carName!,
             message: carInfoClicked.carName! + " Info Button Click!",
-            preferredStyle: UIAlertControllerStyle.alert
+            preferredStyle: UIAlertControllerStyle.Alert
         )
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 80;
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let carInfoClicked = carArray.object(at: (indexPath as NSIndexPath).row) as! Car
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let carInfoClicked = carArray.objectAtIndex(indexPath.row) as! Car
         let alert = UIAlertController(
             title: carInfoClicked.carName!,
             message: carInfoClicked.carName! + " Cell Select",
-            preferredStyle: UIAlertControllerStyle.alert
+            preferredStyle: UIAlertControllerStyle.Alert
         )
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 
 }

@@ -30,14 +30,14 @@ class Closures: NSObject {
         })
     }
     
-    func work(_ completionBlock:() -> ()) {
+    func work(completionBlock:() -> ()) {
         print("start")
         print("end")
         completionBlock()
         print("completionblock called")
     }
     
-    func workAndSpeak(_ words: String, completionBlock:() -> ()) {
+    func workAndSpeak(words: String, completionBlock:() -> ()) {
         print("start")
         print("i think,", words)
         print("end")
@@ -45,11 +45,11 @@ class Closures: NSObject {
         print("completionblock called")
     }
     
-    func speakAfterWork(_ words: String, completionBlock:(_ said: String) -> ()) {
+    func speakAfterWork(words: String, completionBlock:(said: String) -> ()) {
         print("start")
-        print(words + " a day")
+        print(words.stringByAppendingString(" a day"))
         print("end")
-        completionBlock(words)
+        completionBlock(said: words)
         print("completionblock called")
     }
     

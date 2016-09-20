@@ -19,14 +19,14 @@ class FileDownloader: NSObject, NSURLConnectionDataDelegate {
     
     func startDownload() {
         print("download starting...")
-        let url = URL(string: downloadLink)
-        let request = NSMutableURLRequest(url: url!)
-        connection = NSURLConnection(request: request as URLRequest, delegate: self)!
+        let url = NSURL(string: downloadLink)
+        let request = NSMutableURLRequest(URL: url!)
+        connection = NSURLConnection(request: request, delegate: self)!
         connection.start()
     }
     
-    func connection(_ connection: NSURLConnection, didReceive response: URLResponse) {
-        let httpResponse = response as! HTTPURLResponse
+    func connection(connection: NSURLConnection, didReceiveResponse response: NSURLResponse) {
+        let httpResponse = response as! NSHTTPURLResponse
         var dict = httpResponse.allHeaderFields
         let stringLength = dict["Content-Length"] as! String
         self.totalBytes = Int(stringLength)!
@@ -34,24 +34,24 @@ class FileDownloader: NSObject, NSURLConnectionDataDelegate {
         print("responce received, total bytes to download : \(totalBytes)}")
     }
     
-    func connection(_ connection: NSURLConnection, didReceive data: Data) {
-        self.downloadData.append(data)
-        self.receivedBytes += data.count
+    func connection(connection: NSURLConnection, didReceiveData data: NSData) {
+        self.downloadData.appendData(data)
+        self.receivedBytes += data.length
         self.downloadPercent = (Float(receivedBytes) / Float(totalBytes)) * 100
         print("progress: %\(downloadPercent)")
     }
     
-    func connection(_ connection: NSURLConnection, didFailWithError error: Error) {
+    func connection(connection: NSURLConnection, didFailWithError error: NSError) {
         print("download failed")
     }
     
-    func connectionDidFinishLoading(_ connection: NSURLConnection) {
+    func connectionDidFinishLoading(connection: NSURLConnection) {
         print("download completed")
         let paths = NSSearchPathForDirectoriesInDomains(
-            .documentDirectory, .userDomainMask, true)
+            .DocumentDirectory, .UserDomainMask, true)
         let documentsDirectory = paths[0] 
         let path = "\(documentsDirectory)/sample.mp4"
-        self.downloadData.write(toFile: path, atomically: true)
+        self.downloadData.writeToFile(path, atomically: true)
         print("file located at : \(path)")
     }
     

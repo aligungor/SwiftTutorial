@@ -25,12 +25,12 @@ class TextViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onClickAdd(_ sender: AnyObject) {
+    @IBAction func onClickAdd(sender: AnyObject) {
         lblOutput.text = lblOutput.text! + "" + txtInput.text!
         txtInput.text = ""
     }
     
-    @IBAction func onClickClear(_ sender: AnyObject) {
+    @IBAction func onClickClear(sender: AnyObject) {
         lblOutput.text = ""
         txtInput.text = ""
     }

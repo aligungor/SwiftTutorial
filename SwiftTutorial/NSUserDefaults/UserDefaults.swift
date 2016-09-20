@@ -22,26 +22,26 @@ class UserDefaults: NSObject {
     var mBool : Bool = false
     var mFloat : Float = 3.14
     var mDouble : Double = 22/7
-    var mUrl : URL = URL(string: "http://www.google.com")!
+    var mUrl : NSURL = NSURL(string: "http://www.google.com")!
     
     func cacheDefaults() {
-        let defaults = Foundation.UserDefaults.standard
-        defaults.set(mString, forKey: STRING_KEY)
-        defaults.set(mInt, forKey: INTEGER_KEY)
-        defaults.set(mBool, forKey: BOOL_KEY)
-        defaults.set(mFloat, forKey: FLOAT_KEY)
-        defaults.set(mDouble, forKey: DOUBLE_KEY)
-        defaults.set(mUrl, forKey: URL_KEY)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(mString, forKey: STRING_KEY)
+        defaults.setInteger(mInt, forKey: INTEGER_KEY)
+        defaults.setBool(mBool, forKey: BOOL_KEY)
+        defaults.setFloat(mFloat, forKey: FLOAT_KEY)
+        defaults.setDouble(mDouble, forKey: DOUBLE_KEY)
+        defaults.setURL(mUrl, forKey: URL_KEY)
     }
     
     func getCachedDefaults() {
-        let defaults = Foundation.UserDefaults.standard
-        let cachedString = defaults.object(forKey: STRING_KEY) as! String
-        let cachedInt = defaults.integer(forKey: INTEGER_KEY)
-        let cachedBool = defaults.bool(forKey: BOOL_KEY)
-        let cachedFloat = defaults.float(forKey: FLOAT_KEY)
-        let cachedDouble = defaults.double(forKey: DOUBLE_KEY)
-        let cachedUrl = defaults.url(forKey: URL_KEY)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let cachedString = defaults.objectForKey(STRING_KEY) as! String
+        let cachedInt = defaults.integerForKey(INTEGER_KEY)
+        let cachedBool = defaults.boolForKey(BOOL_KEY)
+        let cachedFloat = defaults.floatForKey(FLOAT_KEY)
+        let cachedDouble = defaults.doubleForKey(DOUBLE_KEY)
+        let cachedUrl = defaults.URLForKey(URL_KEY)
         print("cached defaults :")
         print(cachedString)
         print(cachedInt)

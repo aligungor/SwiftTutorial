@@ -20,9 +20,9 @@ class SecondStoryboardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onClickShowFirst(_ sender: UIButton) {
+    @IBAction func onClickShowFirst(sender: UIButton) {
         let storyboard = UIStoryboard(name: "First", bundle: nil)
-        let firstStoryboardViewController = storyboard.instantiateViewController(withIdentifier: "firstVC")
+        let firstStoryboardViewController = storyboard.instantiateViewControllerWithIdentifier("firstVC")
         self.navigationController?.pushViewController(firstStoryboardViewController, animated: true)
     }
 

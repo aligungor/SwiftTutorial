@@ -17,12 +17,12 @@ class Sleeper: NSObject {
     
     func doYourBussiness() {
         let sleepTime = 3.0
-        let backgroundQueue = DispatchQueue.global(qos: DispatchQoS.QoSClass.background)
+        let backgroundQueue = dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)
         self.delegate?.sleepStarted()
-        backgroundQueue.async(execute: {
+        dispatch_async(backgroundQueue, {
             self.delegate?.sleeping(self, forTime: sleepTime)
-            Thread.sleep(forTimeInterval: sleepTime)
-            DispatchQueue.main.async(execute: { () -> Void in
+            NSThread.sleepForTimeInterval(sleepTime)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.delegate?.sleepEnd()
             })
         })
@@ -31,6 +31,6 @@ class Sleeper: NSObject {
 
 protocol SleeperDelegate {
     func sleepStarted()
-    func sleeping(_ sleeper: Sleeper, forTime time: Double)
+    func sleeping(sleeper: Sleeper, forTime time: Double)
     func sleepEnd()
 }
