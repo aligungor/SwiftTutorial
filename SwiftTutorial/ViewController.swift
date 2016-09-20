@@ -28,8 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             "XML Parse",
             "Delegation",
             "Closures",
-            "MultipleStoryboards",
-            "Inheritance"
+            "MultipleStoryboards"
         ]
         
         tblMenu.estimatedRowHeight = 44.0
@@ -84,8 +83,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             Closures.runClosures()
         } else if selected == "MultipleStoryboards" {
             MultipleStoryboards.showMultipleStoryboards(self.navigationController!);
-        } else if selected == "Inheritance" {
-            Inheritance.work()
         }
     }
     
